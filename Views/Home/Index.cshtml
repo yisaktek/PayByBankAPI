@@ -4,7 +4,16 @@
      </head>
     <body>
         <div>@ViewBag.jsonPayloadTitle</div>
-        <div>@ViewBag.jwsPayload</div>
+        <div>Get Status Header</div>
+        <div>transacitonID:a657fe097c094f0199dec3a1980a170e</div>
+        <div>Authorization Header:</div>
+        <div>@ViewBag.AuthHeader</div>
+        <div></div>
+        <div></div>
+        <div></div>
+    <div>Init Payment:</div>
+    <div></div>
+
         <div id="amex-paywithbank"></div>
         <script>
             var amex_paywithbank_init = {
@@ -13,11 +22,12 @@
                 "country_code": "GB",
                 "request_id": "r27822dd6eff4c7dab4ee650035e91ac",
                 /**/
-                "order_details":"eyJhbGciOiJIUzI1NiIsImtpZCI6ImlkX1M3VlZ5SE4xIn0.eyAKIm9yZGVyX2lkIjogIjYzNTUyOTExIiwKImNvcnJlbGF0aW9uX2lkIjogInIyNzgyMmRkNmVmZjRjN2RhYjRlZTY1MDAzNWU5MWFjIiwKICJhbW91bnQiOiAiMS4zMCIsCiAiY3VycmVuY3kiOiAiR0JQIiwKICJ0aW1lc3RhbXAiOiAxNTQ4OTAzNDIzNDExLAogInBheW1lbnRfY29udGV4dF9jb2RlIjogIkVjb21tZXJjZUdvb2RzIiwKICJjdXN0b21lcl9pZCI6ICJyb2dlcnQxMjMyMiIsCiAiZGVsaXZlcnlfYWRkcmVzcyI6ICJleUpoYkdjaU9pSkJNalUyUzFjaUxDSmxibU1pT2lKQk1USTRRMEpETFVoVE1qVTJJaXdpYTJsa0lqb2lhV1JmYW1WdWQwOXNiSGNpZlEuZ1c0ckZHNTN2ajdFVDBCZWxzZWFQT0syNVFrSGtiVkx6eDM5b1pZU3dDQ09TdFRZSGRva0RnLkZZNmpuMl9IbUI5RmN5anB5c2tQLVEua1NNTER1cXg1MVcwUTc5V09YS3lCazV2WXJpQURMcEhtNm85UTl0bjBVZEV5MmlwOXc4UkpMODhmVEVDNVFYbVhnMGh5dXFLMHl1eWFiMmE1c0Yyai12cVdjQ25HV1hldWd3WFJId0FJVklrWnRIeUg3dWhHRTN3WHg2Ykh0ajMtN1lDUjVUaTVTT08yWmIycE94Nk44dkozREI1MVhLNFZ1VVVUbkNaWGhBTnZ6MGtrdGI2c3dGaEVBQWkzeUlleHRFNktwM0dEdTBTbFd5aW1tdFViMWQ0dFZWWlhxUldfdk9Dbm1TRnhpQVJtUWRRVFpjbW0ySG1HLV9OUlA3aHUzNEdBYy1kY3oyVXdCUldMYjJMT3cuRlh1UXNGYnVuZHFPQjRjM2Y3MHhadyIsCiAicmVkaXJlY3RfdXJsIjoiaHR0cHM6Ly9tZXJjaGFudGhvc3RlZC5yZWRpcmVjdHVybC5jb20iLAogInNlc3Npb25faWQiOiAiMjI0YmI5MTQ4M2ZkNGJhMGJjMzMwMWYxNmM4ZTUwMzQiCn0.Lrs34vxC_w3VMQYwru_leU3c1xOsA3XuK8aiJIQLJR8"// JWE Payload
+                "order_details":"@ViewBag.JWSData"// JWE Payload
             /**/
         }
         </script>
         <script src="https://icm.aexp-static.com/Internet/IMDC/paywithbank/v2/js/pwb.js" />
+
 
     </body>
     </html>

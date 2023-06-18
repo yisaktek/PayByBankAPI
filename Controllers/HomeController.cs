@@ -27,10 +27,10 @@ namespace PayByBankAPI.Controllers
 
             #endregion
 
-            #region MyRegion
+            #region Get Status 
 
             var statusHeader = getStatusAuthHaeder();
-
+            ViewBag.AuthHeader = statusHeader;
             #endregion
 
             string addressPayload = "{\n" +
@@ -56,7 +56,7 @@ namespace PayByBankAPI.Controllers
             string payload = "{ \n" +
                              "\"order_id\": \"63552911\",\n" +
                              "\"correlation_id\": \"r27822dd6eff4c7dab4ee650035e91ac\",\n" +
-                             " \"amount\": \"1.30\",\n" +
+                             " \"amount\": \"1.40\",\n" +
                              " \"currency\": \"GBP\",\n" +
                              " \"timestamp\": 1548903423411,\n" +
                              " \"payment_context_code\": \"EcommerceGoods\",\n" +
@@ -68,6 +68,7 @@ namespace PayByBankAPI.Controllers
             // Pass this jwsPayload in order details
             string jwsPayload = createJWSPayload(payload);
             Console.WriteLine("JWS Signed Payload::" + jwsPayload);
+            ViewBag.JWSData = jwsPayload;
             // Verify Singature and get Json Payload
             string jsonPayload = getJWSPayload(jwsPayload);
             Console.WriteLine("Json Payload::" + jsonPayload);
