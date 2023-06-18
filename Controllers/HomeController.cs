@@ -20,10 +20,11 @@ namespace PayByBankAPI.Controllers
         {
             #region PayLoad  Response  get the JWS_data
 
-            var paylod =
+            var ProviderResponse =
                 "eyJraWQiOiJpZF9TN1ZWeUhOMSIsImFsZyI6IkhTMjU2In0.eyJhbW91bnQiOiIxLjMwIiwiY3VycmVuY3kiOiJHQlAiLCJ0aW1lc3RhbXAiOjE2ODcwNjY5MjU5ODUsIm9yZGVyX2lkIjoiNjM1NTI5MTEiLCJjb3JyZWxhdGlvbl9pZCI6InIyNzgyMmRkNmVmZjRjN2RhYjRlZTY1MDAzNWU5MWFjIiwicmVxdWVzdF9pZCI6InIyNzgyMmRkNmVmZjRjN2RhYjRlZTY1MDAzNWU5MWFjIiwic2Vzc2lvbl9pZCI6IjIyNGJiOTE0ODNmZDRiYTBiYzMzMDFmMTZjOGU1MDM0IiwidHJhbnNhY3Rpb25faWQiOiJhNjU3ZmUwOTdjMDk0ZjAxOTlkZWMzYTE5ODBhMTcwZSIsInBheW1lbnRfc3RhdHVzIjoiQWNjZXB0ZWRTZXR0bGVtZW50Q29tcGxldGVkIiwiYmFua19yZWZlcmVuY2VfaWQiOiJQV0JUMTY4NzA2Njg5NjU4MiJ9.OA7vUiFVFiTTc5uTsIBiD-XEQrLE2pxaR3veyQ2zxGs";
-            var paylod2 = getJWSPayload(paylod);
-
+            var JWS_dataResponse = getJWSPayload(ProviderResponse).ToString();
+            ViewBag.ProviderResponse = ProviderResponse;
+            ViewBag.JWS_dataResponse = JWS_dataResponse;
 
             #endregion
 
